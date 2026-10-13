@@ -4,6 +4,25 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-10-13
+
+- reconciled at `26701541`: `docs/current/release-state.md` gained the 2026-09-22 row to the Edge Function changes table (gather record tables, `cleanup-expired-data` target fix). The migration is recorded as not applied, taken from the merge message of `83ce7c48`. No other current doc needed a change: `features.md` and `architecture.md` already carried the 2026-09-08 synthetic lab and the G20 contract is indexed under `project-documentation/ctrl-evolution/`.
+- reconciled at `26701541`: `public/.well-known/product.json` unchanged; nothing since 2026-09-08 touches a claim it carries. `npm run docs:check` passes.
+- rolled from NOW.md: 2026-09-08 **G20 contract: paste in fast, prompt out to Claude** (`618bf912`). A governing contract, not an implementation. The founder call it records: "the Claude UI is often where I do things", so CTRL owns the governed Brain and Claude stays a thinking surface, with private-staging capture and scoped, time-bounded read-only context capsules. No connector, write path or UI is authorised (`project-documentation/ctrl-evolution/g20-universal-capture-claude-bridge-contract.md`).
+- rolled from NOW.md: 2026-09-08 **Synthetic Brain population and range lab** (#388, #389, #391). 48 deterministic synthetic identities and an unlinked diagnostic dashboard so Brain inputs, processing boundaries and oracles can be exercised without any customer data. Strict Brain crypto and ingest primitives landed with tests (#385) and are not wired to a customer path.
+- rolled from NOW.md: 2026-09-08 **Two public Answers published** (#380, #381, #384). Each is written as a position against how vendors grade themselves, for example that tasks done is not the same measure as decisions improved (`src/content/answers/`).
+- rolled from NOW.md: 2026-09-08 **G16 merged and production-verified.** PR #374 merged at `860dea0`; Vercel production `dpl_2JFRfmZRzUvxbdwXqLunG3eubTgc` is READY and PROMOTED from the exact SHA. The synthetic Decision Bench stayed closed and rendered the standard 404. The Living Brain substrate behind it (11 empty tables, forced RLS) is live and disconnected; the multi-identity behavioural suite still needs a writable non-customer connection.
+- rolled from NOW.md: 2026-09-08 fail-closed Living Brain substrate. Three additive migrations created the dormant workspace, audience, encrypted source, versioned item, typed relationship and evidence kernel; live readback found zero rows and no Brain security-advisor findings.
+- rolled from NOW.md: 2026-09-08 G16 merged and production-verified. PR #374 merged at `860dea0`; Vercel production `dpl_2JFRfmZRzUvxbdwXqLunG3eubTgc` READY and PROMOTED from the exact SHA.
+- rolled from NOW.md: 2026-09-07 radar evidence survives the rolling window (PR #375, `edd9045`). The studio export read one cached day, so a story that ran on several days arrived several times; it now reads four days and merges repeated sightings. No deployment readback.
+- rolled from NOW.md: 2026-09-07 docs steward adopted. The 2026-09-04 upload (`8174677`, 76 files) put untitled dumps and a production login into a public repo and overwrote nine reconciled documents; 64 files moved to history, nine restored, credential removed.
+- rolled from NOW.md: 2026-09-02 audience axis and stance on the headline pool (PRs #372, #373). Only 23 of 488 cached items carried `org`; backfill readback 476 items, 473 classified, 12 `damage` dropped.
+- rolled from NOW.md: 2026-08-28 cached radar signals exported for the video studio (PR #371); directory count 114 to 115.
+- rolled from NOW.md: 2026-08-21 release to production and two pseudonymiser defects the dry run caught (`bac02d3`); 24 Edge Functions redeployed, 177 to 178 deployed.
+- rolled from NOW.md: 2026-08-20 migrations applied and the retention column production never had repaired (`19d80f3`); two anonymous SECURITY DEFINER paths revoked; migrations 163 to 165.
+- rolled from NOW.md: 2026-08-20 unused code removed (`71667d2`; 238 source files, 28 dependencies, typecheck baseline 221 to 94), the personal frame held structurally (`962d0e8`, Decisions 82 to 84), trust surface and access hardening (PR #370; advisors 268 to 258).
+- rolled from NOW.md: 2026-08-12 `.vercel.run` hosts allowed on the dev server (`081ebe9`); 2026-08-11 company recognition in onboarding (PR #369), shell unification (PR #368), commercial authority (PR #367), Blind Spot instrument (PR #366); 2026-08-10 canonical current documentation (PR #365) and Make Your Mind Up unified with CTRL (PR #362).
+
 ## 2026-09-07
 
 - decision: docs steward adopted for this repository, Krish 2026-09-07. The steward adds `NOW.md` and this log, moves superseded documents into `docs/history/` with a banner, and runs from `.github/workflows/docs-steward.yml`. The repo's own rules in `docs/current/documentation-standards.md` keep precedence on structure, naming and archive location.
