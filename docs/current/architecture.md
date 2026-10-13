@@ -97,6 +97,8 @@ Control Center is an optional read-only source adapter inside `live-headlines`. 
 
 Each cached card carries a subject (`category`) and, since 2026-09-02, two optional additive audience fields written by the same synthesis call: `affects` (which business divisions the story lands on) and `stance` (`opportunity`, `shift`, `risk` or `damage`). A `damage` item, one that reports harm with no move in it for the reader, is dropped before caching (`_shared/news-synthesis.ts`, `live-headlines/index.ts`). Older cache rows without the fields keep working.
 
+Since the 2026-09-22 source change, `live-headlines` also writes every article it gathers, with the verdict the pipeline reached, to append-only record tables (`live_headlines_gather`, `live_headlines_gather_runs`, `live_headlines_cache_versions`, `model_benchmark_snapshots`; migration `20260922100000_ctrl_keeps_what_it_gathered.sql`). The served feed is unchanged. The migration is not recorded as applied to the shared project; see [release state](./release-state.md).
+
 The pool has one consumer outside the app. `video-radar-export` (since 2026-08-28) maps the most recent cached days and the current `news_trends` rows into the video studio's candidate contract (`_shared/video-radar-contract.ts`), merging repeated sightings of one story and carrying every distinct public source URL. It is GET only, gated by a bearer token checked in the handler rather than a user JWT, rate limited, and returns only public signal fields. It never writes to the pool.
 
 ### Decision engine
