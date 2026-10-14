@@ -1,9 +1,9 @@
 ---
 repo: krishanraja/mm-ctrl
 product: CTRL by Mindmake
-as_of: 2026-09-08
-head: 860dea0
-head_scope: G16 application release receipt
+as_of: 2026-10-14
+head: 2670154
+head_scope: last non-steward commit on main, a canon block sync; the G16 application release stays 860dea0
 lifecycle: live
 production_url: https://makeyourmindup.ai
 state_doc: docs/current/release-state.md
@@ -32,7 +32,7 @@ Angles a writer can use without asking Krish, each with its pointer:
 
 Objection it answers: "He talks about AI. Has he shipped anything a customer pays for and kept it honest?" Here is the product, with its failures in the changelog.
 
-## Where it is right now (as of 2026-09-08)
+## Where it is right now (as of 2026-10-14)
 
 - **Live** at `makeyourmindup.ai`. The exact G16 application release is `860dea0`, Vercel `dpl_2JFRfmZRzUvxbdwXqLunG3eubTgc`, READY and PROMOTED from that SHA (`docs/current/release-state.md`). Answer-only publishing and documentation receipts may advance `main` and create newer deployment IDs without changing this G16 receipt.
 - **Edge Functions:** 115 directories in the tree. 114 confirmed deployed and ACTIVE by management API readback on 2026-08-21. `live-headlines` version 48 deployed and verified against cache readback on 2026-09-02 (476 items, 473 classified, 12 `damage` dropped). Two changes have no deployment readback recorded here: `video-radar-export` (PR #371, 2026-08-28) and the rolling-window merge (PR #375, `edd9045`).
@@ -46,23 +46,11 @@ Objection it answers: "He talks about AI. Has he shipped anything a customer pay
 
 ## What changed recently
 
-- 2026-09-08 **Fail-closed Living Brain substrate.** Three additive migrations created the dormant workspace, audience, encrypted source, versioned item, typed relationship and evidence kernel. Live readback found zero rows and no Brain security-advisor findings. The management SQL connection is read-only, so the committed rollback-only multi-identity behavioural suite remains pending a writable non-customer test connection.
-- 2026-09-08 **G16 merged and production-verified.** PR #374 merged at `860dea0`; Vercel production `dpl_2JFRfmZRzUvxbdwXqLunG3eubTgc` is READY and PROMOTED from the exact SHA. The canonical host and prerendered public routes passed smoke checks, while the synthetic Decision Bench remained closed and rendered the standard 404.
-- 2026-09-07 **Radar evidence survives the rolling window** (PR #375, `edd9045`). Why: the studio export read one cached day, so a story that ran on several days arrived several times, each copy citing one link. It now reads four days and merges repeated sightings into one candidate carrying every distinct public URL. The code's own words: "The rolling window is evidence coverage, not permission to show the same event several times." No deployment readback yet.
-- 2026-09-07 **Docs steward adopted.** Why: the 2026-09-04 upload (`8174677`, 76 files, 19,720 lines) put six untitled dumps, twelve June surface maps and a production login and password into a public repo, and overwrote nine reconciled documents. All 64 loose files moved to history with banners, the nine restored, the credential removed. `docs/history/LOG.md`.
-- 2026-09-02 **Audience axis and stance on the headline pool** (PRs #372, #373). Why: `category` records only a story's subject, and the subject always wins, so only 23 of 488 cached items carried `org` and the audience a story lands on was never recorded. Each card gained `affects` and `stance`; a `damage` item (harm with no move in it for the reader) is dropped before caching. Backfill readback: 476 items, 473 classified, 12 dropped (`CHANGELOG.md`).
-- 2026-08-28 **Cached radar signals exported for the video studio** (PR #371). Why: the local Mindmake video studio needed the corroborated pool without a user JWT or the service role, so a dedicated GET-only function checks its own bearer token, rate limits, and "never returns service credentials" (`supabase/config.toml`). Directory count 114 to 115.
-- 2026-08-21 **Release to production, and two pseudonymiser defects the dry run caught** (`bac02d3`). 24 Edge Functions redeployed and confirmed ACTIVE by readback, 177 to 178 deployed; training material to global version 3 with 33 roles and 36 allowlist entries. The Supabase CLI could not reach `api.supabase.com` from the delivery environment, so `scripts/deploy-edge-function.mjs` does the CLI's job over the management API.
-- 2026-08-20 **Migrations applied, and the retention column production never had repaired** (`19d80f3`). Why: the ledger showed nothing; object readback showed `cleanup_expired_memories()` raising 42703 on every call. Two anonymous SECURITY DEFINER paths that returned every account's activity or could force a global sweep were revoked to `service_role`. Migrations 163 to 165.
-- 2026-08-20 **Remove what is unused, and make every document say what is true** (`71667d2`). 238 unreachable source files and 28 unused dependencies removed by walking the import graph; typecheck baseline 221 to 94; all 67 documents classed and dated. The shared Supabase project, never mentioned before, written into README, architecture and the compliance pack.
-- 2026-08-20 **The personal frame held structurally** (`962d0e8`, Decisions 82 to 84). Settings had offered 30 and 90 day retention while nothing ever ran the sweep; account deletion now cancels Stripe first; the sheets export writes aggregate counts, never a person.
-- 2026-08-20 **Trust surface and access hardening** (PR #370). An unauthenticated cross-tenant read through four anon-executable definer functions closed; five security headers added; advisors 268 to 258.
-- 2026-08-12 **`.vercel.run` hosts allowed on the dev server** (`081ebe9`). Why: cloud previews use a per-session hostname Vite's DNS-rebinding guard rejected; a wildcard rather than `allowedHosts: true` keeps the guard.
-- 2026-08-11 **Company recognition restored in onboarding** (PR #369): a work email or LinkedIn URL resolves to a bounded, source-linked dossier with one-click correction. **Shell unified** (PR #368). **Commercial authority established** (PR #367): one human-readable owner for buyer, offer and claims, with drift checks in CI. **Blind Spot trusted-advisor instrument** (PR #366) released and verified in production.
-- 2026-08-10 **Canonical current documentation** (PR #365) separating current truth from history, and **Make Your Mind Up unified with CTRL** (PR #362): one product, one data spine, no-login delivery.
+- 2026-09-22 **The gather is kept, not only the feed** (`a6ce832a`, merge `83ce7c48`). Why: `live-headlines` fetches several hundred AI stories a day and serves twenty, and "until now the feed was the only output, so the rejected majority never existed as data." Four append-only tables, enforced by trigger, now record every article with the verdict reached about it, every version of a cached day, a daily model benchmark snapshot and per-source counts, because the shared pool "went dark for four weeks to 2026-08-05 and nothing reported it." The same commit found `cleanup-expired-data` had deleted nothing since it was written: it targeted `ai_cache`, a table no migration creates. The delete stays off behind `CLEANUP_PRUNE_AI_CACHE`. The feed is unchanged and no migration is recorded as applied (`CHANGELOG.md`, 2026-09-22).
 
 ## What is next and what is waiting on Krish
 
+- Waiting on Krish: applying the migration `20260922100000_ctrl_keeps_what_it_gathered.sql` and deploying `live-headlines` and `cleanup-expired-data`, then a readback line in `docs/current/release-state.md`.
 - Next engineering gate: one designated synthetic Brain workspace, a server-side encrypted write adapter, the committed multi-identity database suite on a writable non-customer connection, and a read-only projection before any approved Brain UI consumes real substrate data.
 - Waiting on Krish: a deployment readback for `video-radar-export` and the PR #375 change, then a line in `docs/current/release-state.md`.
 - Waiting on Krish: the product name. The fleet calls this "CTRL by Mindmake"; the repo's README title, `product.json` (`legal_entity`, `parent` link) and compliance pack say "Mindmaker". The steward does not change names or commercial claims.
