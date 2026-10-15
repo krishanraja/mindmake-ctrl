@@ -4,6 +4,19 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-10-15
+
+- reconciled at `9cc46ab`: `docs/current/release-state.md`, `docs/current/architecture.md`, `docs/current/features.md` and `project-documentation/README.md` already carry the 116 function and 171 migration counts and the G16 receipt, checked against the tree; `CHANGELOG.md` already has the 2026-09-22 entry. No change to those files.
+- rolled from NOW.md: 2026-09-08 Fail-closed Living Brain substrate. Three additive migrations created the dormant workspace, audience, encrypted source, versioned item, typed relationship and evidence kernel; live readback found zero rows and no Brain security-advisor findings; the committed rollback-only multi-identity suite stays pending a writable non-customer connection.
+- rolled from NOW.md: 2026-09-08 G16 merged and production-verified. PR #374 merged at `860dea0`; Vercel production `dpl_2JFRfmZRzUvxbdwXqLunG3eubTgc` READY and PROMOTED from the exact SHA; the synthetic Decision Bench stayed closed and rendered the standard 404.
+- rolled from NOW.md: 2026-09-07 Radar evidence survives the rolling window (PR #375, `edd9045`). The studio export read one cached day, so a story that ran on several days arrived several times; it now reads four days and merges repeated sightings into one candidate carrying every distinct public URL.
+- rolled from NOW.md: 2026-09-07 Docs steward adopted. The 2026-09-04 upload (`8174677`, 76 files) put six untitled dumps, twelve June surface maps and a production login and password into a public repo and overwrote nine reconciled documents.
+- rolled from NOW.md: 2026-09-02 Audience axis and stance on the headline pool (PRs #372, #373). Only 23 of 488 cached items carried `org`; each card gained `affects` and `stance`, and a `damage` item is dropped before caching. Backfill readback: 476 items, 473 classified, 12 dropped.
+- rolled from NOW.md: 2026-08-28 Cached radar signals exported for the video studio (PR #371), a GET-only function with its own bearer token and rate limit. Directory count 114 to 115.
+- rolled from NOW.md: 2026-08-21 Release to production, and two pseudonymiser defects the dry run caught (`bac02d3`). 24 Edge Functions redeployed and confirmed ACTIVE by readback; the Supabase CLI could not reach `api.supabase.com`, so `scripts/deploy-edge-function.mjs` uses the management API.
+- rolled from NOW.md: 2026-08-20 Migrations applied and the retention column production never had repaired (`19d80f3`); unused code removed and every document classed (`71667d2`); the personal frame held structurally (`962d0e8`, Decisions 82 to 84); trust surface and access hardening (PR #370).
+- rolled from NOW.md: 2026-08-12 `.vercel.run` hosts allowed on the dev server (`081ebe9`); 2026-08-11 company recognition restored in onboarding (PR #369), shell unified (PR #368), commercial authority established (PR #367), Blind Spot trusted-advisor instrument (PR #366); 2026-08-10 canonical current documentation (PR #365) and Make Your Mind Up unified with CTRL (PR #362).
+
 ## 2026-09-07
 
 - decision: docs steward adopted for this repository, Krish 2026-09-07. The steward adds `NOW.md` and this log, moves superseded documents into `docs/history/` with a banner, and runs from `.github/workflows/docs-steward.yml`. The repo's own rules in `docs/current/documentation-standards.md` keep precedence on structure, naming and archive location.
