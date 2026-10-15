@@ -179,6 +179,7 @@ export async function callOpenAI(
     temperature: request.temperature ?? 0.7,
     max_tokens: request.max_tokens ?? 2000,
     stream: request.stream ?? false,
+    store: false,
     ...(request.response_format && { response_format: request.response_format }),
   };
   
@@ -239,6 +240,7 @@ export async function* streamOpenAI(
     temperature: request.temperature ?? 0.7,
     max_tokens: request.max_tokens ?? 2000,
     stream: true,
+    store: false,
   };
   
   // Bounds time-to-headers only; the timer clears once the response starts,
