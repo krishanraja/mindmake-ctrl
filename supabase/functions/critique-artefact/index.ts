@@ -91,6 +91,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import type { SupabaseClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { createLogger } from "../_shared/logger.ts";
 import { selectModel } from "../_shared/openai-utils.ts";
+import { matchesExpectedSupabaseProject } from "../_shared/project-binding.ts";
 import {
   availableProviders,
   callLLMWithFallback,
@@ -143,8 +144,6 @@ const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
-
-const EXPECTED_PROJECT_ID = "bkyuxvschuwngtcdhsyg";
 
 /** Below this there is nothing to review, and a review of nothing is theatre. */
 const MIN_ARTEFACT_CHARS = 120;
@@ -246,7 +245,8 @@ Deno.serve(async (req) => {
     const supabaseUrl = Deno.env.get("SUPABASE_URL") ?? "";
     const anonKey = Deno.env.get("SUPABASE_ANON_KEY") ?? "";
     const serviceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "";
-    if (!supabaseUrl.includes(EXPECTED_PROJECT_ID)) {
+    const expectedProjectRef = Deno.env.get("EXPECTED_SUPABASE_PROJECT_REF") ?? "";
+    if (!matchesExpectedSupabaseProject(supabaseUrl, expectedProjectRef)) {
       throw new Error("Database configuration error (unexpected project).");
     }
 
