@@ -4,8 +4,20 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-10-16
+
+- reconciled at `d2483fd`: `NOW.md` brought forward from `860dea0` over 26 commits; the repository's own current docs (`docs/current/*`, `project-documentation/README.md`) already carried the 116-function count. Rolled bullets older than 30 days are logged under their own dates below.
+
+## 2026-09-08
+
+- rolled from NOW.md: 2026-09-08 **Fail-closed Living Brain substrate.** Three additive migrations created the dormant workspace, audience, encrypted source, versioned item, typed relationship and evidence kernel. Live readback found zero rows and no Brain security-advisor findings. The management SQL connection is read-only, so the committed rollback-only multi-identity behavioural suite remains pending a writable non-customer test connection.
+- rolled from NOW.md: 2026-09-08 **G16 merged and production-verified.** PR #374 merged at `860dea0`; Vercel production `dpl_2JFRfmZRzUvxbdwXqLunG3eubTgc` is READY and PROMOTED from the exact SHA. The canonical host and prerendered public routes passed smoke checks, while the synthetic Decision Bench remained closed and rendered the standard 404.
+- reconciled at `d2483fd`: not carried in NOW.md because they are over 30 days old. Brain adapter primitives (#385: `brain-crypto`, `brain-ingest-core`), a synthetic population (G18, #388) and a protected internal synthetic range lab (G19, #389, #391) were added; G20 (#392) locked a universal capture and Claude bridge contract. The lab renders only for the locked synthetic customer (`docs/current/features.md`). Three Answers were published (#380, #381, #384).
+
 ## 2026-09-07
 
+- rolled from NOW.md: 2026-09-07 **Radar evidence survives the rolling window** (PR #375, `edd9045`). Why: the studio export read one cached day, so a story that ran on several days arrived several times, each copy citing one link. It now reads four days and merges repeated sightings into one candidate carrying every distinct public URL. The code's own words: "The rolling window is evidence coverage, not permission to show the same event several times." No deployment readback yet.
+- rolled from NOW.md: 2026-09-07 **Docs steward adopted.** Why: the 2026-09-04 upload (`8174677`, 76 files, 19,720 lines) put six untitled dumps, twelve June surface maps and a production login and password into a public repo, and overwrote nine reconciled documents. All 64 loose files moved to history with banners, the nine restored, the credential removed. `docs/history/LOG.md`.
 - decision: docs steward adopted for this repository, Krish 2026-09-07. The steward adds `NOW.md` and this log, moves superseded documents into `docs/history/` with a banner, and runs from `.github/workflows/docs-steward.yml`. The repo's own rules in `docs/current/documentation-standards.md` keep precedence on structure, naming and archive location.
 - reconciled at `edd9045`: a production login and password stood in plain text in `docs/BUILD-CHRONICLE.md` (capture notes, line 12) since the upload of 2026-09-04; removed and replaced with a placeholder that says the password must be rotated. The same account's address stood alone in `docs/_INTAKE-HARNESS-SPEC.md` (line 59) and was removed. Both files are archived below. The values remain in git history at `8174677`, so rotation is still required.
 - reconciled at `edd9045`: the 2026-09-04 upload (`8174677`, "Add files via upload", 76 files) overwrote nine documents that had been reconciled on 2026-08-20, stripping their Status, Owner and Last verified headers and, on two of them, restoring the "current release overlay" pattern the standards forbid. Restored to the pre-upload revision (`8174677^`): `docs/AGENTIC_UI_TESTING.md`, `docs/BRIEFING_GENERATION_HISTORY.md`, `docs/CTRL-SYSTEM-SPEC.md`, `docs/CURATION-SYSTEM-SPEC.md` (which also recovers the audience-axis paragraph from PR #372), `docs/ENRICHMENT-CONVERGENCE.md`, `docs/HARNESS-CHAIN-STATE.md`, `docs/KIT-REDESIGN-SPEC.md`, `docs/MAIN-APP-POLISH-SPEC.md`, `docs/PORTFOLIO-HIVE-MIND.md`. Bodies were otherwise identical apart from line endings. The upload's revisions are in git at `8174677`.
@@ -85,3 +97,34 @@ describes current behaviour; NOW.md and the state doc do.
 - archived `docs/history/PROJECT-DOCUMENTATION-README-2026-08-10.md`: the former project-documentation index, archived 2026-08-10, replaced by `docs/current/README.md`.
 - archived `docs/history/ROOT-README-2026-08-10.md`: the former repository README, archived 2026-08-10, replaced by `README.md`.
 - archived `docs/history/VISUAL_GUIDELINES-superseded.md`: the prior visual guidelines, archived 2026-08-20, replaced by `project-documentation/BRANDING.md` and `docs/current/product.md`.
+
+## 2026-09-02
+
+- rolled from NOW.md: 2026-09-02 **Audience axis and stance on the headline pool** (PRs #372, #373). Why: `category` records only a story's subject, and the subject always wins, so only 23 of 488 cached items carried `org` and the audience a story lands on was never recorded. Each card gained `affects` and `stance`; a `damage` item (harm with no move in it for the reader) is dropped before caching. Backfill readback: 476 items, 473 classified, 12 dropped (`CHANGELOG.md`).
+
+## 2026-08-28
+
+- rolled from NOW.md: 2026-08-28 **Cached radar signals exported for the video studio** (PR #371). Why: the local Mindmake video studio needed the corroborated pool without a user JWT or the service role, so a dedicated GET-only function checks its own bearer token, rate limits, and "never returns service credentials" (`supabase/config.toml`). Directory count 114 to 115.
+
+## 2026-08-21
+
+- rolled from NOW.md: 2026-08-21 **Release to production, and two pseudonymiser defects the dry run caught** (`bac02d3`). 24 Edge Functions redeployed and confirmed ACTIVE by readback, 177 to 178 deployed; training material to global version 3 with 33 roles and 36 allowlist entries. The Supabase CLI could not reach `api.supabase.com` from the delivery environment, so `scripts/deploy-edge-function.mjs` does the CLI's job over the management API.
+
+## 2026-08-20
+
+- rolled from NOW.md: 2026-08-20 **Migrations applied, and the retention column production never had repaired** (`19d80f3`). Why: the ledger showed nothing; object readback showed `cleanup_expired_memories()` raising 42703 on every call. Two anonymous SECURITY DEFINER paths that returned every account's activity or could force a global sweep were revoked to `service_role`. Migrations 163 to 165.
+- rolled from NOW.md: 2026-08-20 **Remove what is unused, and make every document say what is true** (`71667d2`). 238 unreachable source files and 28 unused dependencies removed by walking the import graph; typecheck baseline 221 to 94; all 67 documents classed and dated. The shared Supabase project, never mentioned before, written into README, architecture and the compliance pack.
+- rolled from NOW.md: 2026-08-20 **The personal frame held structurally** (`962d0e8`, Decisions 82 to 84). Settings had offered 30 and 90 day retention while nothing ever ran the sweep; account deletion now cancels Stripe first; the sheets export writes aggregate counts, never a person.
+- rolled from NOW.md: 2026-08-20 **Trust surface and access hardening** (PR #370). An unauthenticated cross-tenant read through four anon-executable definer functions closed; five security headers added; advisors 268 to 258.
+
+## 2026-08-12
+
+- rolled from NOW.md: 2026-08-12 **`.vercel.run` hosts allowed on the dev server** (`081ebe9`). Why: cloud previews use a per-session hostname Vite's DNS-rebinding guard rejected; a wildcard rather than `allowedHosts: true` keeps the guard.
+
+## 2026-08-11
+
+- rolled from NOW.md: 2026-08-11 **Company recognition restored in onboarding** (PR #369): a work email or LinkedIn URL resolves to a bounded, source-linked dossier with one-click correction. **Shell unified** (PR #368). **Commercial authority established** (PR #367): one human-readable owner for buyer, offer and claims, with drift checks in CI. **Blind Spot trusted-advisor instrument** (PR #366) released and verified in production.
+
+## 2026-08-10
+
+- rolled from NOW.md: 2026-08-10 **Canonical current documentation** (PR #365) separating current truth from history, and **Make Your Mind Up unified with CTRL** (PR #362): one product, one data spine, no-login delivery.
