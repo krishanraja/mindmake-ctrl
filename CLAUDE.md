@@ -1,3 +1,5 @@
+@AGENTS.md
+
 # CTRL coding instructions
 
 Status: Current
