@@ -6,6 +6,12 @@ Last verified: 2026-08-20
 
 Definition, view, table, and function names confirmed against `supabase/migrations/20260704120000_north_star_flywheel.sql`. The `north-star-daily-snapshot` cron job was confirmed active at `0 6 * * *` by production readback on 2026-08-20, so the trend line is genuinely being populated.
 
+## Horizon
+
+> By September 2027, 100 leaders turn the flywheel every week. CTRL is what a leader keeps after the room, and they would refuse to give it back.
+
+Set by Krish on 18 October 2026, and not reached yet. Everything below serves it, every session in this repository works toward it, and only Krish changes it.
+
 ## The outcome
 
 CTRL exists to give a time-poor founder or small-team CEO a quieter way through AI: notice what matters, weigh a real decision against evidence, and compound useful context without surrendering judgement. See [`docs/current/product.md`](../docs/current/product.md) and [`docs/current/commercial.md`](../docs/current/commercial.md).
