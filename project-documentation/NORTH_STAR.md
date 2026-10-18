@@ -8,7 +8,7 @@ Definition, view, table, and function names confirmed against `supabase/migratio
 
 ## Horizon
 
-> By September 2027, 100 leaders turn the flywheel every week. CTRL is what a leader keeps after the room, and they would refuse to give it back.
+> By March 2027, 100 leaders turn the flywheel every week. CTRL is what a leader keeps after the room, and they would refuse to give it back.
 
 Set by Krish on 18 October 2026, and not reached yet. Everything below serves it, every session in this repository works toward it, and only Krish changes it.
 
