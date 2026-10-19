@@ -4,6 +4,24 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-10-19
+
+- reconciled at `596a088`: NOW.md was 29 commits behind (head `860dea0`, 2026-09-08). Moved forward over the gather-keeping change, the OpenAI storage change, the steward move to ai-harness, the repository-context rollout and the North Star. `docs/current/` already matched the tree counts (116 Edge Function directories, 171 migrations) and was left alone.
+- rolled from NOW.md: 2026-09-08 fail-closed Living Brain substrate. Three additive migrations created the dormant workspace, audience, encrypted source, versioned item, typed relationship and evidence kernel; live readback found zero rows and no Brain security-advisor findings; the committed rollback-only multi-identity suite stays pending a writable non-customer connection.
+- rolled from NOW.md: 2026-09-08 G16 merged and production-verified. PR #374 at `860dea0`; Vercel `dpl_2JFRfmZRzUvxbdwXqLunG3eubTgc` READY and PROMOTED from the exact SHA; the synthetic Decision Bench stayed closed and rendered the standard 404.
+- rolled from NOW.md: 2026-09-07 radar evidence survives the rolling window (PR #375, `edd9045`). The studio export read one cached day, so a story that ran on several days arrived several times, each copy citing one link; it now reads four days and merges repeated sightings into one candidate carrying every distinct public URL.
+- rolled from NOW.md: 2026-09-07 docs steward adopted. The 2026-09-04 upload (`8174677`, 76 files, 19,720 lines) put six untitled dumps, twelve June surface maps and a production login and password into a public repo, and overwrote nine reconciled documents; 64 loose files moved to history, nine restored, the credential removed.
+- rolled from NOW.md: 2026-09-02 audience axis and stance on the headline pool (PRs #372, #373). Only 23 of 488 cached items carried `org`; each card gained `affects` and `stance`, and `damage` items are dropped before caching. Backfill readback: 476 items, 473 classified, 12 dropped.
+- rolled from NOW.md: 2026-08-28 cached radar signals exported for the video studio (PR #371). A dedicated GET-only function checks its own bearer token and rate limits, so the local studio needs neither a user JWT nor the service role.
+- rolled from NOW.md: 2026-08-21 release to production and two pseudonymiser defects the dry run caught (`bac02d3`). 24 Edge Functions redeployed and confirmed ACTIVE; a backfill over 196 memory rows wanted to change two and both changes were wrong; the Supabase CLI could not reach `api.supabase.com`, so `scripts/deploy-edge-function.mjs` works over the management API.
+- rolled from NOW.md: 2026-08-20 migrations applied and the retention column production never had repaired (`19d80f3`). `cleanup_expired_memories()` raised 42703 on every call; two anonymous SECURITY DEFINER paths were revoked to `service_role`; migrations 163 to 165.
+- rolled from NOW.md: 2026-08-20 remove what is unused, and make every document say what is true (`71667d2`). 238 unreachable source files and 28 unused dependencies removed; typecheck baseline 221 to 94; all 67 documents classed and dated.
+- rolled from NOW.md: 2026-08-20 the personal frame held structurally (`962d0e8`, Decisions 82 to 84). Retention options existed while nothing ran the sweep; account deletion now cancels Stripe first; the sheets export writes aggregate counts, never a person.
+- rolled from NOW.md: 2026-08-20 trust surface and access hardening (PR #370). An unauthenticated cross-tenant read through four anon-executable definer functions closed; five security headers added; advisors 268 to 258.
+- rolled from NOW.md: 2026-08-12 `.vercel.run` hosts allowed on the dev server (`081ebe9`); a wildcard rather than `allowedHosts: true` keeps Vite's DNS-rebinding guard.
+- rolled from NOW.md: 2026-08-11 company recognition restored in onboarding (PR #369), shell unified (PR #368), commercial authority established (PR #367), Blind Spot trusted-advisor instrument (PR #366).
+- rolled from NOW.md: 2026-08-10 canonical current documentation (PR #365) and Make Your Mind Up unified with CTRL (PR #362).
+
 ## 2026-09-07
 
 - decision: docs steward adopted for this repository, Krish 2026-09-07. The steward adds `NOW.md` and this log, moves superseded documents into `docs/history/` with a banner, and runs from `.github/workflows/docs-steward.yml`. The repo's own rules in `docs/current/documentation-standards.md` keep precedence on structure, naming and archive location.
