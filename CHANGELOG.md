@@ -2,13 +2,21 @@
 
 Status: Historical
 Owner: Mindmaker
-Last reconciled: 2026-09-08
+Last reconciled: 2026-10-21
 
 > A running record of shipped changes, newest first. It explains how the product arrived here; it is not a description of current behaviour. For that, see [`docs/current/`](./docs/current/README.md).
 
+## 2026-10-15 - OpenAI storage off, and privacy functions bound to the configured project
+
+Merged to `main` (PR #398, `9cc46ab6`). No deployment readback is recorded here.
+
+- Every OpenAI Chat Completions request built in `_shared/openai-utils.ts` now sends `store: false`, in both the plain and the streaming path.
+- Added `_shared/project-binding.ts`, and `build-sort`, `compile-standard` and `critique-artefact` use it to bind to the configured project.
+- Restored the `measure-standard` function source (the commit message: "restore measure-standard source").
+
 ## 2026-09-22 - The gather is kept, not only the feed
 
-Committed on `claude/pensive-newton-r9gl3o`. Not merged, not applied to production, and no migration has been run against the shared project. The feed itself is unchanged: the same twenty cards are gathered, filtered and served exactly as before.
+Merged to `main` on 2026-09-22 (`83ce7c48`). No readback shows the migration applied to the shared project or the function deployed. The feed itself is unchanged: the same twenty cards are gathered, filtered and served exactly as before.
 
 - Added `live_headlines_gather`, which records every article every gather sees, with the verdict the pipeline reached about it (`selected`, or a `drop_reason` of `not_ai_native`, `too_old`, `below_trust_floor`, `capped_per_source`, `lane_full` or `damage`). `live-headlines` fetches several hundred articles a day and serves twenty; the rest were discarded in memory and had never existed as data, so volume, share of voice, publisher lead and lag, and any audit of our own filters were unanswerable by construction.
 - Recorded an absolute `published_at` per article. The cards only ever carried `timeAgo`, a relative string frozen at gather time, and the only real date on a cached day was `briefing_date`, which is when CTRL looked rather than when the thing happened. Null is kept when the source is silent and is never replaced with the observation time.
