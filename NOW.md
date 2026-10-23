@@ -2,8 +2,8 @@
 repo: krishanraja/mm-ctrl
 product: CTRL by Mindmake
 as_of: 2026-10-23
-head: 860dea0
-head_scope: G16 application release receipt
+head: 20a6d2d
+head_scope: North Star number and weekly ladder
 lifecycle: live
 production_url: https://makeyourmindup.ai
 state_doc: docs/current/release-state.md
@@ -48,6 +48,7 @@ Objection it answers: "He talks about AI. Has he shipped anything a customer pay
 
 ## What changed recently
 
+- 2026-10-15 **Chat Completions calls stopped being stored by the provider.** PR #398 disables OpenAI chat storage, restores the `measure-standard` edge function source and binds the privacy functions to the configured project. No deployment readback is recorded here (`supabase/functions/_shared/openai-utils.ts`).
 - 2026-10-23 **The North Star now has a number, a weekly ladder and an urgency rating, so every session knows how far behind it is and how hard to push.** Ruling (Krish, 2026-10-23): every repository chases one aggressive number on a weekly ladder, and urgency U1 to U5 sets its intensity. The number and ladder are in `project-documentation/NORTH_STAR.md`; where it stands is the first line under "Where it is right now". Contract: ai-harness `contract/north-star-metric.md`.
 
 ## What is next and what is waiting on Krish
