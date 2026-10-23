@@ -16,13 +16,13 @@ Read `NOW.md` first.
 
 Rules: `CLAUDE.md`, `project-documentation/AGENT_BRIEFING.md`.
 
-<!-- krish-canon:start release=v2026.10.15.2 sha=df2059f93981 rendered=2026-10-15 -->
+<!-- krish-canon:start release=v2026.10.22.1 sha=a5e51c018478 rendered=2026-10-23 -->
 ## Krish canon
 
-Rendered from `krishanraja/ai-harness` at release v2026.10.15.2. Nothing inside these
+Rendered from `krishanraja/ai-harness` at release v2026.10.22.1. Nothing inside these
 markers is hand-maintained: an edit here is detected and proposed back to the canon,
-never silently overwritten, and never lost. Everything outside the markers belongs to
-this repository and is never read or rewritten by the harness.
+never silently overwritten, and never lost. This sync preserves all other text.
+Separately approved repository administration owns only its declared regions and context file.
 
 **Precedence.** This repository's own rules outrank the canon on repository matters:
 structure, naming, voice, stamps, archive location, test and build commands. The canon
@@ -59,7 +59,7 @@ lives only in a chat window teaches nothing.
 **Route.** principles, then context, then `strategy-brief`, then the producer, then
 `verification-loop`, then the approval gate, then delivery. The narrowest applicable
 skill wins; a broad "always" or "mandatory" claim inside a skill never overrides the
-router. One primary writer; validators may stack after it, competing writers may not.
+router. One primary writer; validators may stack after it, competing writers may not. **North Star:** before any work, read the North Star linked from the `north-star` block in `AGENTS.md` or `CLAUDE.md`, say which part of it the task moves, and say so first when it moves nothing; only Krish changes it, and a repository with none asks him for one. Then read the number's urgency (U1 to U5) in `NOW.md` and push at the intensity `contract/north-star-metric.md` sets for it; urgency never widens authority. **Close out:** before a session that changed the repository ends, update `NOW.md` (status, the single next step, and one dated North Star check line: holds, or recalibration proposed for Krish). **One home per fact:** read a venture's state from its repository, doctrine from ai-harness; never keep a copy.
 
 **Who Krish is.** Purpose: "I see what is coming before it is obvious and make it
 legible to people while it still counts." Mindmake is his mission and his one company;
