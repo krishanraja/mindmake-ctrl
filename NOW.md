@@ -1,9 +1,9 @@
 ---
 repo: krishanraja/mm-ctrl
 product: CTRL by Mindmake
-as_of: 2026-10-23
-head: 860dea0
-head_scope: G16 application release receipt
+as_of: 2026-10-24
+head: 20a6d2d
+head_scope: last non-steward commit; the production release receipt is still G16 at 860dea0
 lifecycle: live
 production_url: https://makeyourmindup.ai
 state_doc: docs/current/release-state.md
@@ -32,12 +32,12 @@ Angles a writer can use without asking Krish, each with its pointer:
 
 Objection it answers: "He talks about AI. Has he shipped anything a customer pays for and kept it honest?" Here is the product, with its failures in the changelog.
 
-## Where it is right now (as of 2026-10-23)
+## Where it is right now (as of 2026-10-24)
 
 <!-- north-star-state {"week_of": "2026-10-26", "week_target": 1, "current": 0, "current_as_of": "2026-10-23", "current_source": "Supabase ctrl north_star_flywheel (flywheel_users 0)", "urgency": 4, "urgency_reason": "at 0% of this week's target"} --> **North Star number: U4, far behind.** Flywheel leaders this week (at least 5 brain facts and a decision weighed in the last 7 days): 0, against 1 this week, on the way to 1,000 by 29 March 2027. A bold swing every day; work that does not move the number waits.
 
 - **Live** at `makeyourmindup.ai`. The exact G16 application release is `860dea0`, Vercel `dpl_2JFRfmZRzUvxbdwXqLunG3eubTgc`, READY and PROMOTED from that SHA (`docs/current/release-state.md`). Answer-only publishing and documentation receipts may advance `main` and create newer deployment IDs without changing this G16 receipt.
-- **Edge Functions:** 115 directories in the tree. 114 confirmed deployed and ACTIVE by management API readback on 2026-08-21. `live-headlines` version 48 deployed and verified against cache readback on 2026-09-02 (476 items, 473 classified, 12 `damage` dropped). Two changes have no deployment readback recorded here: `video-radar-export` (PR #371, 2026-08-28) and the rolling-window merge (PR #375, `edd9045`).
+- **Edge Functions:** 116 directories in the tree (115 at the 2026-08-21 count, plus `measure-standard`, restored in PR #398). 114 confirmed deployed and ACTIVE by management API readback on 2026-08-21. `live-headlines` version 48 deployed and verified against cache readback on 2026-09-02 (476 items, 473 classified, 12 `damage` dropped). Two changes have no deployment readback recorded here: `video-radar-export` (PR #371, 2026-08-28) and the rolling-window merge (PR #375, `edd9045`).
 - **Tests:** production `main` passes 945 tests in 60 files, with zero new type errors against the 94-error legacy baseline. CI runs docs, standards, tests, typecheck, build and changed-file lint on every push.
 - **Living Brain substrate:** 11 additive production tables are live, empty and disconnected from customer paths. Forced RLS, non-anonymous workspace membership, exact-audience grants and authenticated read-only ACLs protect them. A service-side write adapter and writable multi-identity behavioural test remain future work (`project-documentation/ctrl-evolution/g16-workspace-audience-canary.md`).
 - **Scheduled work:** twelve pg_cron jobs active at the 2026-08-20 readback, including the nightly `retention-cleanup` added that day (release state, "Scheduled work actually running").
@@ -48,6 +48,7 @@ Objection it answers: "He talks about AI. Has he shipped anything a customer pay
 
 ## What changed recently
 
+- 2026-10-15 **Chat completions stopped storing prompts at the provider, and a lost function came back.** PR #398 (`9cc46ab6`) sets `store: false` on the OpenAI Chat Completions calls in `supabase/functions/_shared/openai-utils.ts`, restores the `measure-standard` source ("chore(edge): restore measure-standard source") and binds the privacy functions to the configured project. No deployment readback is recorded here for any of the three.
 - 2026-10-23 **The North Star now has a number, a weekly ladder and an urgency rating, so every session knows how far behind it is and how hard to push.** Ruling (Krish, 2026-10-23): every repository chases one aggressive number on a weekly ladder, and urgency U1 to U5 sets its intensity. The number and ladder are in `project-documentation/NORTH_STAR.md`; where it stands is the first line under "Where it is right now". Contract: ai-harness `contract/north-star-metric.md`.
 
 ## What is next and what is waiting on Krish

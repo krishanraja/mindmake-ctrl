@@ -4,6 +4,12 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-10-24
+
+- rolled from NOW.md: bullets more than 30 days old (the steward's window):
+  - 2026-09-22 **The feed showed twenty stories a day and the other several hundred never existed as data.** `live-headlines` fetches several hundred AI stories and serves twenty; "Volume, share of voice, publisher lead and lag, and any audit of our own filters were unanswerable by construction" (`a6ce832a`). It adds three append-only record tables (every gathered article with its verdict, every cached-day version, a daily model benchmark snapshot) and per-source run counts, because "the shared pool went dark for four weeks to 2026-08-05 and nothing reported it". It also found `cleanup-expired-data` had deleted nothing since it was written: it targeted `ai_cache`, a table no migration creates. The delete stays off behind `CLEANUP_PRUNE_AI_CACHE`. Committed and merged; the commit says no migration had been applied to the shared project, and no later readback is recorded.
+  - 2026-09-08 **Synthetic Brain range lab and strict adapter primitives, all still closed in production.** G17 service-adapter contract and strict Brain adapter primitives (#385), a 48-identity synthetic population (G18, #388) and an unlinked, noindex range lab at `/operator/lab/synthetic-population/:accountId` (G19, #389, #391), plus the G20 universal capture and Claude bridge contract (#392). None has persistence authority or touches a customer path (`docs/current/features.md`, "Synthetic preview only").
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
