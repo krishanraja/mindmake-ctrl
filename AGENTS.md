@@ -4,10 +4,10 @@ Read `NOW.md` first.
 
 Rules: `CLAUDE.md`, `project-documentation/AGENT_BRIEFING.md`.
 
-<!-- krish-canon:start release=v2026.10.22.1 sha=a5e51c018478 rendered=2026-10-23 -->
+<!-- krish-canon:start release=v2026.10.24.1 sha=ac1422c2d46e rendered=2026-10-24 -->
 ## Krish canon
 
-Rendered from `krishanraja/ai-harness` at release v2026.10.22.1. Nothing inside these
+Rendered from `krishanraja/ai-harness` at release v2026.10.24.1. Nothing inside these
 markers is hand-maintained: an edit here is detected and proposed back to the canon,
 never silently overwritten, and never lost. This sync preserves all other text.
 Separately approved repository administration owns only its declared regions and context file.
