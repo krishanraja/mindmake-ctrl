@@ -1,9 +1,9 @@
 ---
 repo: krishanraja/mm-ctrl
 product: CTRL by Mindmake
-as_of: 2026-10-23
-head: 860dea0
-head_scope: G16 application release receipt
+as_of: 2026-10-28
+head: d528225
+head_scope: repository administration sync after the G20 capture contract
 lifecycle: live
 production_url: https://makeyourmindup.ai
 state_doc: docs/current/release-state.md
@@ -32,7 +32,7 @@ Angles a writer can use without asking Krish, each with its pointer:
 
 Objection it answers: "He talks about AI. Has he shipped anything a customer pays for and kept it honest?" Here is the product, with its failures in the changelog.
 
-## Where it is right now (as of 2026-10-23)
+## Where it is right now (as of 2026-10-28)
 
 <!-- north-star-state {"week_of": "2026-10-26", "week_target": 1, "current": 0, "current_as_of": "2026-10-23", "current_source": "Supabase ctrl north_star_flywheel (flywheel_users 0)", "urgency": 4, "urgency_reason": "at 0% of this week's target"} --> **North Star number: U4, far behind.** Flywheel leaders this week (at least 5 brain facts and a decision weighed in the last 7 days): 0, against 1 this week, on the way to 1,000 by 29 March 2027. A bold swing every day; work that does not move the number waits.
 
@@ -43,11 +43,11 @@ Objection it answers: "He talks about AI. Has he shipped anything a customer pay
 - **Scheduled work:** twelve pg_cron jobs active at the 2026-08-20 readback, including the nightly `retention-cleanup` added that day (release state, "Scheduled work actually running").
 - **Pricing:** Free, and Edge Pro at $49 monthly. Canonical in `supabase/functions/_shared/edge-pricing.ts`; `public/.well-known/product.json` mirrors it and `npm run docs:check` fails if they disagree.
 - **Compliance:** controls in place are listed at `/trust` and in `project-documentation/compliance/`; no SOC 2 report, no ISO 27001 certificate, HIPAA out of scope.
-- **Documentation:** 64 files uploaded on 2026-09-04 without headers were classed Historical and moved to `docs/history/` today; nine reconciled docs the upload overwrote were restored (`docs/history/LOG.md`, 2026-09-07).
 - **Waiting on evidence, not code:** deployment of `video-radar-export` and of the PR #375 change.
 
 ## What changed recently
 
+- 2026-10-15 **OpenAI chat storage was switched off.** PR #398, "Disable storage for OpenAI Chat Completions", shipped as a privacy fix: `fix(privacy): disable OpenAI chat storage`, with the `measure-standard` edge source restored and privacy functions bound to the configured project. A product that holds a leader's private context should not leave copies at a provider by default. No deployment readback is recorded here.
 - 2026-10-23 **The North Star now has a number, a weekly ladder and an urgency rating, so every session knows how far behind it is and how hard to push.** Ruling (Krish, 2026-10-23): every repository chases one aggressive number on a weekly ladder, and urgency U1 to U5 sets its intensity. The number and ladder are in `project-documentation/NORTH_STAR.md`; where it stands is the first line under "Where it is right now". Contract: ai-harness `contract/north-star-metric.md`.
 
 ## What is next and what is waiting on Krish
