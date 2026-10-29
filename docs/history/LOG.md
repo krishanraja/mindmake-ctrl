@@ -4,6 +4,12 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-10-26
+
+- rolled from NOW.md: bullets more than 30 days old (the steward's window):
+  - 2026-09-22 **The feed now keeps what it rejects.** Why, in the commit's words: `live-headlines` "fetches several hundred AI stories a day and serves twenty", so "the rejected majority never existed as data". Three append-only record tables (every gathered article with its verdict, every version of a cached day, a daily model benchmark snapshot) plus per-source run counts, because the shared pool "went dark for four weeks to 2026-08-05 and nothing reported it". It also found `cleanup-expired-data` had deleted nothing since written, because it targeted a table no migration creates; the delete stays off behind a flag. The feed itself is unchanged. The commit records that no migration had been applied to the shared project (`supabase/migrations/20260922100000_ctrl_keeps_what_it_gathered.sql`); no later applied readback is recorded here.
+  - 2026-09-08 **The Brain gets its first code, still synthetic.** Strict Brain adapter primitives (PR #385), a 48-identity synthetic population (G18, PR #388), an unlinked range lab at `/operator/lab/synthetic-population/:accountId` (G19, PRs #389 and #391) and the G20 contract for one-gesture private capture and read-only Claude context capsules (PR #392). The lab shares the Decision Bench preview boundary and has no persistence authority. No real substrate data is read by any of it.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
