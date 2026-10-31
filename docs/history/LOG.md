@@ -4,6 +4,13 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-10-27
+
+- reconciled at `20a6d2d`: NOW.md head moved from `860dea0` to `20a6d2d`; the Edge Function directory count corrected from 115 to 116 (PR #398 restored `measure-standard`). One bullet added to NOW.md for 2026-10-15.
+- rolled from NOW.md: bullets more than 30 days old:
+  - 2026-09-22 **CTRL now keeps every article it gathers, not only the twenty it serves** (`a6ce832`). Why, in the commit's words: "live-headlines fetches several hundred AI stories a day and serves twenty ... the rejected majority never existed as data." Three append-only record tables (gather, cache versions, daily model benchmarks) and per-source run counts, because "the shared pool went dark for four weeks to 2026-08-05 and nothing reported it." It also found `cleanup-expired-data` had deleted nothing since it was written, because it targeted `ai_cache`, a table no migration creates; the delete stays off behind a flag as "a person's decision". The feed is unchanged. No deployment readback is recorded.
+- also for the record, work merged 2026-09-08 after the G16 receipt and described in `project-documentation/ctrl-evolution/`: strict Brain adapter primitives (PR #385), the G18 synthetic Brain population (PR #388), the G19 synthetic range lab and its QA record (PRs #389, #391) and the G20 universal capture and Claude bridge contract (PR #392, documentation only). They are synthetic and disconnected from customer paths.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
