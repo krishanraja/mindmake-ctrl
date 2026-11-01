@@ -4,6 +4,11 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-11-01
+
+- rolled from NOW.md: 2026-09-22 **The feed was the only output, so the rejected majority never existed as data.** The commit says `live-headlines` "fetches several hundred AI stories a day and serves twenty", leaving volume, share of voice and any audit of the filters unanswerable by construction. Three append-only record tables now keep the gather, every cached version of a day and the daily model benchmark board. It also found `cleanup-expired-data` had "deleted nothing since it was written because it targeted ai_cache, a table no migration creates"; the delete stays off behind a flag. Source: commit `a6ce832`, CHANGELOG 2026-09-22. Merged to main, but the commit states no migration had been applied to the shared project, and no readback is recorded here.
+- reconciled NOW.md at `20a6d2d`: head and as_of were 2026-09-08 and 2026-10-23 stale; added the 2026-10-15 storage change; trimmed 'Where it is right now' to 7 bullets.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
