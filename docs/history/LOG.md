@@ -4,6 +4,12 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-10-25
+
+- rolled from NOW.md: bullets more than 30 days old (the steward's window):
+  - 2026-09-22 **Every article the gather sees is now kept, not only the twenty served.** Why, in the commit's words: "Volume, share of voice, publisher lead and lag, and any audit of our own filters were unanswerable by construction." Three append-only record tables, enforced by trigger. The same commit found `cleanup-expired-data` had "deleted nothing since it was written because it targeted ai_cache, a table no migration creates"; the delete stays off behind a flag. "No migration has been applied to the shared project" at commit time; no later readback is recorded here.
+  - 2026-09-08 **Brain adapter primitives, a synthetic population and a range lab** (PRs #385, #388, #389, #391). Strict server-side Brain crypto and ingest primitives, a synthetic population and an internal lab page, all behind the closed Brain gate. G17 (service adapter) and G20 (universal capture and Claude bridge) are contracts only: the G20 record says no connector, write path or UI is authorised.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
