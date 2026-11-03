@@ -4,6 +4,10 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-10-29
+
+- reconciled at `89c6d333`: NOW.md "Where it is right now" cut to seven bullets (audit rule `where_too_many`). The documentation-move bullet is recorded under 2026-09-07 below and the waiting-on-evidence bullet merged into the Edge Functions bullet. The Edge Functions directory count moved from 115 to 116 (`measure-standard`); G17 to G20 contract documents and the 2026-09-22 gather change were not re-read against `docs/current/`, so the state doc may lag them.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
