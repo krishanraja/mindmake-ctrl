@@ -4,6 +4,12 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-11-03
+
+- re-stamped NOW.md: head 4e1db87, as_of 2026-11-03. Cut "Where it is right now" to eight bullets by moving the 2026-09-07 documentation-move note (already recorded in this log) out of it, and added what merged since the G16 receipt.
+- rolled from NOW.md: bullets more than 30 days old:
+  - 2026-09-22 **The gather keeps every article it sees, not only the twenty it serves** (`a6ce832`). A new migration, `20260922100000_ctrl_keeps_what_it_gathered.sql`, supports it. No deployment readback is recorded here.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
