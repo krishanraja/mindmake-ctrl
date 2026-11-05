@@ -1,9 +1,9 @@
 ---
 repo: krishanraja/mm-ctrl
 product: CTRL by Mindmake
-as_of: 2026-10-23
-head: 860dea0
-head_scope: G16 application release receipt
+as_of: 2026-11-05
+head: 4e1db87
+head_scope: North Star number line (0 against 3, U5)
 lifecycle: live
 production_url: https://makeyourmindup.ai
 state_doc: docs/current/release-state.md
@@ -32,27 +32,26 @@ Angles a writer can use without asking Krish, each with its pointer:
 
 Objection it answers: "He talks about AI. Has he shipped anything a customer pays for and kept it honest?" Here is the product, with its failures in the changelog.
 
-## Where it is right now (as of 2026-10-23)
+## Where it is right now (as of 2026-11-05)
 
 <!-- north-star-state {"week_of":"2026-11-02","week_target":3,"current":0,"current_as_of":"2026-11-02","current_source":"Supabase ctrl: north_star_flywheel view (flywheel_users), read by Control Center","urgency":5,"urgency_reason":"under 40% of the week's target two weeks running (0% now)"} --> **North Star number: U5, stalled.** Flywheel leaders this week (at least 5 brain facts and a decision weighed in the last 7 days): 0, against 3 this week, on the way to 1,000 by 29 March 2027. Everything else pauses unless it moves the number.
 
 - **Live** at `makeyourmindup.ai`. The exact G16 application release is `860dea0`, Vercel `dpl_2JFRfmZRzUvxbdwXqLunG3eubTgc`, READY and PROMOTED from that SHA (`docs/current/release-state.md`). Answer-only publishing and documentation receipts may advance `main` and create newer deployment IDs without changing this G16 receipt.
-- **Edge Functions:** 115 directories in the tree. 114 confirmed deployed and ACTIVE by management API readback on 2026-08-21. `live-headlines` version 48 deployed and verified against cache readback on 2026-09-02 (476 items, 473 classified, 12 `damage` dropped). Two changes have no deployment readback recorded here: `video-radar-export` (PR #371, 2026-08-28) and the rolling-window merge (PR #375, `edd9045`).
-- **Tests:** production `main` passes 945 tests in 60 files, with zero new type errors against the 94-error legacy baseline. CI runs docs, standards, tests, typecheck, build and changed-file lint on every push.
+- **Tests:** CI runs docs, standards, tests, typecheck, build and changed-file lint on every push. The last recorded count is 945 tests in 60 files at the G16 release; later suites (synthetic population lab, Brain crypto and ingest, trend memory) have no count recorded here.
+- **Edge Functions:** 114 confirmed deployed and ACTIVE by management API readback on 2026-08-21. `live-headlines` version 48 deployed and verified against cache readback on 2026-09-02 (476 items, 473 classified, 12 `damage` dropped). Two changes have no deployment readback recorded here: `video-radar-export` (PR #371, 2026-08-28) and the rolling-window merge (PR #375, `edd9045`).
 - **Living Brain substrate:** 11 additive production tables are live, empty and disconnected from customer paths. Forced RLS, non-anonymous workspace membership, exact-audience grants and authenticated read-only ACLs protect them. A service-side write adapter and writable multi-identity behavioural test remain future work (`project-documentation/ctrl-evolution/g16-workspace-audience-canary.md`).
-- **Scheduled work:** twelve pg_cron jobs active at the 2026-08-20 readback, including the nightly `retention-cleanup` added that day (release state, "Scheduled work actually running").
-- **Pricing:** Free, and Edge Pro at $49 monthly. Canonical in `supabase/functions/_shared/edge-pricing.ts`; `public/.well-known/product.json` mirrors it and `npm run docs:check` fails if they disagree.
-- **Compliance:** controls in place are listed at `/trust` and in `project-documentation/compliance/`; no SOC 2 report, no ISO 27001 certificate, HIPAA out of scope.
-- **Documentation:** 64 files uploaded on 2026-09-04 without headers were classed Historical and moved to `docs/history/` today; nine reconciled docs the upload overwrote were restored (`docs/history/LOG.md`, 2026-09-07).
-- **Waiting on evidence, not code:** deployment of `video-radar-export` and of the PR #375 change.
+- **Scheduled work and pricing:** twelve pg_cron jobs active at the 2026-08-20 readback, including the nightly `retention-cleanup` added that day (release state, "Scheduled work actually running"). Pricing is Free and Edge Pro at $49 monthly, canonical in `supabase/functions/_shared/edge-pricing.ts`; `public/.well-known/product.json` mirrors it and `npm run docs:check` fails if they disagree. Compliance controls in place are listed at `/trust` and in `project-documentation/compliance/`; no SOC 2 report, no ISO 27001 certificate, HIPAA out of scope.
+- **Merged since the G16 receipt, deployment not recorded here:** strict Brain adapter primitives and the synthetic population lab route (G17 to G19, `project-documentation/ctrl-evolution/`), `live-headlines` gather retention migration `20260922100000_ctrl_keeps_what_it_gathered.sql`, OpenAI chat storage disabled (PR #398), and a new `measure-standard` function. Treat each as built and merged, not live, until a readback lands in `docs/current/release-state.md`.
+- **Waiting on evidence, not code:** deployment of `video-radar-export`, the PR #375 change, and the items above.
 
 ## What changed recently
 
+- 2026-10-15 **Privacy fix:** OpenAI Chat Completions calls no longer store requests (PR #398).
 - 2026-10-23 **The North Star now has a number, a weekly ladder and an urgency rating, so every session knows how far behind it is and how hard to push.** Ruling (Krish, 2026-10-23): every repository chases one aggressive number on a weekly ladder, and urgency U1 to U5 sets its intensity. The number and ladder are in `project-documentation/NORTH_STAR.md`; where it stands is the first line under "Where it is right now". Contract: ai-harness `contract/north-star-metric.md`.
 
 ## What is next and what is waiting on Krish
 
-- Next engineering gate: one designated synthetic Brain workspace, a server-side encrypted write adapter, the committed multi-identity database suite on a writable non-customer connection, and a read-only projection before any approved Brain UI consumes real substrate data.
+- Next engineering gate (synthetic lab and adapter primitives are merged; the remainder is open): one designated synthetic Brain workspace, a server-side encrypted write adapter, the committed multi-identity database suite on a writable non-customer connection, and a read-only projection before any approved Brain UI consumes real substrate data.
 - Waiting on Krish: a deployment readback for `video-radar-export` and the PR #375 change, then a line in `docs/current/release-state.md`.
 - Waiting on Krish: the product name. The fleet calls this "CTRL by Mindmake"; the repo's README title, `product.json` (`legal_entity`, `parent` link) and compliance pack say "Mindmaker". The steward does not change names or commercial claims.
 - Waiting on Krish: whether the corpus and course material archived today (the `doc-*`, syllabus and `DECISIONING CORPUS` files) belongs in another repository, and whether `docs/CTRL-BRAIN-ARCHITECTURE.md` (now in history) should be re-headed as a Reference for the brain migrations that cite it.

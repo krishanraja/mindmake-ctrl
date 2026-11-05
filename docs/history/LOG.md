@@ -4,6 +4,12 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-11-05
+
+- rolled from NOW.md: bullets more than 30 days old (the steward's window):
+  - 2026-09-22 **The feed was the only output, so the rejected majority never existed as data.** `live-headlines` fetches several hundred AI stories a day and serves twenty; "volume, share of voice, publisher lead and lag, and any audit of our own filters were unanswerable by construction." Commit `a6ce832a` adds append-only record tables enforced by trigger, and records per-source counts because "the shared pool went dark for four weeks to 2026-08-05 and nothing reported it". It also found `cleanup-expired-data` had deleted nothing since written, because it targeted `ai_cache`, a table no migration creates; the delete stays off behind a flag. Merged; production application not recorded here.
+  - 2026-09-08 **The Brain moved from tables to contracts.** Strict adapter primitives (`0aa7175f`), a synthetic Brain population and range lab (G18, G19) and the G20 contract for one-gesture private capture and read-only Claude context capsules, so the next proof gate runs on synthetic data before any customer data touches the substrate.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
