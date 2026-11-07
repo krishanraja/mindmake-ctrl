@@ -4,6 +4,11 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-11-07
+
+- reconciled at `4e1db87`: `NOW.md` re-stamped after 38 non-steward commits. Merged since `860dea0` and not yet in a bullet: strict Brain adapter primitives (#385), the G18 synthetic population and G19 range lab (#388, #389, #391), the G20 capture and Claude bridge contract (#392), and on 2026-09-22 the append-only gather record tables with the `cleanup-expired-data` fix (`ai_cache` named a table no migration creates; the delete stays off). Per `CHANGELOG.md` that migration was not applied to the shared project when written; no later readback is recorded.
+- audit: `as_of_stale` and `where_too_many` fixed (stamp refreshed, the duplicate "waiting on evidence" bullet removed because "What is next" already carries it). `north_star_check` left: the 2026-10-23 line is carried forward unchanged because only a session that re-reads the North Star may re-date it.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
