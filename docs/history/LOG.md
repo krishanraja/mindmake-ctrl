@@ -4,6 +4,12 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-11-08
+
+- reconciled at `4e1db87`: NOW.md re-stamped; no document was moved. Rolled out of "Where it is right now" as history, not state: 64 files uploaded on 2026-09-04 without headers were classed Historical and moved to `docs/history/` on 2026-09-07 and nine overwritten docs restored (see 2026-09-07 below); the video-radar-export and PR #375 deployment readbacks stay listed under waiting on Krish.
+- rolled from NOW.md: 2026-09-22 **Keep every article the gather sees, not only the twenty it serves** (`a6ce832`). Why, in the commit's words: "the feed was the only output, so the rejected majority never existed as data", and "the shared pool went dark for four weeks to 2026-08-05 and nothing reported it." It also found `cleanup-expired-data` "has deleted nothing since it was written because it targeted ai_cache, a table no migration creates"; the delete stays off behind `CLEANUP_PRUNE_AI_CACHE`. The feed is unchanged.
+- not reconciled: the digest lists 57 stamps older than the newest code change and `docs/current/*` dated 2026-09-08; their bodies were not re-checked against the 2026-09-22 changes this run.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
