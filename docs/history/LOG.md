@@ -4,6 +4,11 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-11-10
+
+- reconciled at `4e1db872`: `NOW.md` re-stamped. The 2026-09-22 change (`a6ce832`) kept every article `live-headlines` gathers, not only the twenty it serves, in append-only tables (`live_headlines_gather`, `live_headlines_cache_versions`, `model_benchmark_snapshots`, `live_headlines_gather_runs`), and fixed `cleanup-expired-data`, which had deleted nothing because it targeted a table no migration creates. `CHANGELOG.md` says it was committed and not applied to production; no migration readback is recorded, so it is merged and unverified live.
+- not reconciled: later commits (G17 to G20 contracts, synthetic population lab, Brain adapter primitives, `measure-standard`) are recorded in their own contract documents; `docs/current/` still stamps 2026-09-08 and was not re-verified against them in this run.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):

@@ -1,9 +1,9 @@
 ---
 repo: krishanraja/mm-ctrl
 product: CTRL by Mindmake
-as_of: 2026-10-23
-head: 860dea0
-head_scope: G16 application release receipt
+as_of: 2026-11-10
+head: 4e1db872b949039f5672e1dfacc999d6d3514396
+head_scope: North Star number update on main; last production receipt is G16 at 860dea0
 lifecycle: live
 production_url: https://makeyourmindup.ai
 state_doc: docs/current/release-state.md
@@ -32,7 +32,7 @@ Angles a writer can use without asking Krish, each with its pointer:
 
 Objection it answers: "He talks about AI. Has he shipped anything a customer pays for and kept it honest?" Here is the product, with its failures in the changelog.
 
-## Where it is right now (as of 2026-10-23)
+## Where it is right now (as of 2026-11-10)
 
 <!-- north-star-state {"week_of":"2026-11-02","week_target":3,"current":0,"current_as_of":"2026-11-02","current_source":"Supabase ctrl: north_star_flywheel view (flywheel_users), read by Control Center","urgency":5,"urgency_reason":"under 40% of the week's target two weeks running (0% now)"} --> **North Star number: U5, stalled.** Flywheel leaders this week (at least 5 brain facts and a decision weighed in the last 7 days): 0, against 3 this week, on the way to 1,000 by 29 March 2027. Everything else pauses unless it moves the number.
 
@@ -44,7 +44,6 @@ Objection it answers: "He talks about AI. Has he shipped anything a customer pay
 - **Pricing:** Free, and Edge Pro at $49 monthly. Canonical in `supabase/functions/_shared/edge-pricing.ts`; `public/.well-known/product.json` mirrors it and `npm run docs:check` fails if they disagree.
 - **Compliance:** controls in place are listed at `/trust` and in `project-documentation/compliance/`; no SOC 2 report, no ISO 27001 certificate, HIPAA out of scope.
 - **Documentation:** 64 files uploaded on 2026-09-04 without headers were classed Historical and moved to `docs/history/` today; nine reconciled docs the upload overwrote were restored (`docs/history/LOG.md`, 2026-09-07).
-- **Waiting on evidence, not code:** deployment of `video-radar-export` and of the PR #375 change.
 
 ## What changed recently
 
