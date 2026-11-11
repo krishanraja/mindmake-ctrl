@@ -4,6 +4,11 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-11-11
+
+- rolled from NOW.md: bullets more than 30 days old (the steward's window):
+  - 2026-09-22 **The feed served twenty stories and threw the rest away.** Commit `a6ce832a`: "live-headlines fetches several hundred AI stories a day and serves twenty." The rejected majority never existed as data, so volume, share of voice and any audit of the filters were unanswerable. Three append-only record tables are added by migration `20260922100000_ctrl_keeps_what_it_gathered.sql`; the commit says no migration had been applied to the shared project. It also found `cleanup-expired-data` had deleted nothing since it was written, because it targeted `ai_cache`, a table no migration creates; the delete stays off behind `CLEANUP_PRUNE_AI_CACHE`.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
