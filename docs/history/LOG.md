@@ -4,6 +4,13 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-11-12
+
+- reconciled at `4e1db872`: NOW.md re-stamped after 38 non-steward commits since `860dea0`. Audit findings fixed: `as_of` stale, "Where it is right now" cut from 9 bullets to 7. The North Star check line is carried forward unchanged; only a session can re-date it.
+- rolled from NOW.md: not applicable. No bullet was older than 30 days. For the record, merged between 2026-09-08 and 2026-09-22 and not in NOW.md before: G17 service adapter contract and strict Brain adapter primitives (#385), G18 synthetic population (#388), G19 synthetic Brain range lab (#389, #391), G20 universal capture and Claude bridge contract (#392), and three published answers (#380, #381, #384).
+- 2026-09-22 (`a6ce832a`) **Keep every article the gather sees.** `live-headlines` fetches several hundred stories a day and serves twenty, so the rejected majority never existed as data. Three append-only record tables were added, and the commit body says "No migration has been applied to the shared project." It also found `cleanup-expired-data` had "deleted nothing since it was written because it targeted ai_cache, a table no migration creates"; the delete stays off. Whether the migration is applied is unread.
+- flagged: `docs/current/release-state.md` and `docs/current/architecture.md` predate these changes; their bodies were not re-verified in this run.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
