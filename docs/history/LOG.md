@@ -4,6 +4,12 @@ Newest first. Entries are written by the docs steward (see the steward link in
 NOW.md) and by humans doing the same job by hand. Nothing in this file
 describes current behaviour; NOW.md and the state doc do.
 
+## 2026-11-14
+
+- rolled from NOW.md: bullets more than 30 days old (the steward's window):
+  - 2026-09-22 **Every article the gather sees is now kept, not only the twenty served.** `live-headlines` fetches several hundred stories a day and serves twenty; the commit's reason: "the rejected majority never existed as data", so volume, share of voice and any audit of our own filters were unanswerable. Three append-only tables record it, and it also found `cleanup-expired-data` had deleted nothing since written because it targeted `ai_cache`, a table no migration creates. The delete stays off behind `CLEANUP_PRUNE_AI_CACHE`. Deployment not recorded here (`CHANGELOG.md`).
+  - 2026-09-08 **Brain work moved from substrate to a synthetic proof, with no customer path touched.** G17 to G19 added strict Brain adapter primitives, a synthetic population and a synthetic range lab; G20 (`project-documentation/ctrl-evolution/g20-universal-capture-claude-bridge-contract.md`) records Krish's call that CTRL should not replace the tools he thinks in, so capture must be one gesture and context must flow to Claude, with "no connector, write path or UI implementation authorised". Merged to main; not deployed to customers.
+
 ## 2026-10-23
 
 - rolled from NOW.md: bullets more than 30 days old (the steward's window):
